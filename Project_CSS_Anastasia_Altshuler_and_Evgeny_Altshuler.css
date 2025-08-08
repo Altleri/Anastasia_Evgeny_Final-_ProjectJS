@@ -1,0 +1,388 @@
+/***************************CSS*************************************
+// ANASTASIIA ALTSHULER 
+// AND EVGENY ALTSHULER 
+/************************************************************************/
+*{
+  box-sizing: border-box;
+}
+
+/*****************************************************************************************/
+/*#region General*/
+
+html,
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  height: 100%;
+
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #d0dbf9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/*#endregion General*/
+/*****************************************************************************************/
+
+/*****************************************************************************************/
+/*#region TITLE*/
+#h1PhoneBook {
+  text-align: center;
+  font-size: 50px;
+}
+
+/*#endregion TITLE*/
+/*****************************************************************************************/
+
+/*****************************************************************************************/
+/*#region Main*/
+main {
+  flex-grow: 1;
+  align-items: center;
+  background: #f4f2f2;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 08);
+  /* Gradient* of shadow*/
+  margin: 0% 13% 0% 13%;
+  border: 1px solid rgb(132, 131, 131);
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  /*take into account the padding in the total width*/
+
+}
+
+/*#endregion*/
+/*****************************************************************************************/
+
+
+/*****************************************************************************************/
+/*#region Set Up of input text area*/
+
+/*Add class for changing display state in lava Script*/
+.displayNone {
+  display: none !important;
+}
+
+/* Input line at the top of the site,
+before contacts. To search for contacts*/
+#searchInput {
+  background-image: url('./image/magnifying\ glass_icon.png');
+  background-position: 95%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  padding: 1%1%1%1%;
+  outline: none;
+}
+
+/*#endregion*/
+/*****************************************************************************************/
+
+/*All div with setting with indented*/
+div {
+  padding-bottom: 1%;
+}
+
+/*****************************************************************************************/
+/*#region FLEX FlexSearchInputText input Text area for search / add and delete contacts*/  
+.searchcontact {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 0 auto;
+}
+
+/* Line that calculated count of contacts (span in html page)*/
+.countOfContact {
+  margin-top: 3%;
+}
+
+/* Container with contact search and icons add / delete*/
+#FlexSearchInputText {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /*use this to push the first item to the left side,
+      the last one to the right side*/
+  padding: 7px 0;
+}
+
+#divSearchInputText1 {
+  display: flex;
+}
+
+#divSearchInputText1 input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(39, 38, 38);
+}
+
+#divSearchInputText1 input:hover {
+  border: 1.5px solid rgb(39, 38, 38);
+}
+
+#divImagesAddAndDelete img {
+  width: 30px;
+}
+
+#divImagesAddAndDelete {
+  display: flex;
+  gap: 12px;
+  padding-right: 47px;
+}
+
+#addPerson:hover {
+  transform: scale(1.2)
+}
+
+#deletePerson:hover {
+  transform: scale(1.2)
+}
+
+
+/*#endregion*/
+/*****************************************************************************************/
+
+/*****************************************************************************************/
+/*#region WITH USERS INFO*/
+.user-list {
+  /*deleted style of list*/
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.user-items {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  /*split the screen*/
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  /*use this to push the first item to the left side,
+    the last one to the right side*/
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.user-items:hover {
+  background-color: #5e5e5f0f;
+  border: 0.5px solid rgba(178, 193, 230, 0.425);
+  box-shadow: 0 2px 4px rgba(178, 193, 230, 0.758);
+  /* Gradient* of shadow*/
+
+}
+
+.user-info {
+  display: flex;
+  /*split the screen*/
+  align-items: center;
+}
+
+.avatar {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 1px solid #3f3e3e8c;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 08);
+  /* Gradient* of shadow*/
+}
+
+.user-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 1em;
+}
+
+.user-name:hover {
+  transform: scale(1.1)
+}
+
+.user-actions {
+  padding-right: 1%;
+  display: flex;
+  gap: 12px;
+  color: #999;
+  font-size: 1px;
+}
+
+.user-actions img {
+  width: 25px;
+}
+
+.user-actions img:hover {
+  transform: scale(1.2)
+}
+
+/*#endregion*/
+/*****************************************************************************************/
+
+
+.footer {
+  text-align: center;
+  font-weight: 600;
+}
+
+/*****************************************************************************************/
+/*#region SET UP all FORMS (input, buttom )*/
+
+form {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-input-popup form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 400px;
+  padding: 10px;
+  margin-left: 3%;
+}
+
+.form-group {
+  padding-top: 2%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  flex: 0 0 100px;
+  text-align: right;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  flex-grow: 1;
+  margin: 0 2% 0 10%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+form button {
+  margin: 0 2%;
+  width: 520px;
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #28a745;
+  color: white;
+  border: none;
+}
+
+form button:hover {
+  background: #218838;
+}
+
+.active {
+  background-color: #0077cc;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 119, 204, 0.3);
+}
+/*#endregion*/
+/*****************************************************************************************/
+
+/*****************************************************************************************/
+/*#region Modal popup */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 2em;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#infoPopup label {
+  margin-right: 5%;
+}
+
+#infoPopup label,
+#infoPopup span {
+  font-size: 20px;
+}
+
+/*#endregion*/
+/*****************************************************************************************/
+
+
+/*****************************************************************************************/
+/*#region for mobile media area*/
+@media only screen and (max-width: 430px) {
+
+  body,
+  html {
+    width: 100%;
+    align-items: center;
+    padding-left: 5%;
+  }
+
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .action-icon img {
+    width: 20px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user-name {
+    font-size: 0.8em;
+  }
+
+  .form-input-popup form {
+    width: 350px;
+  }
+
+  .form-group input {
+    width: 60%;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+
+}
+/*#endregion*/
+/*****************************************************************************************/

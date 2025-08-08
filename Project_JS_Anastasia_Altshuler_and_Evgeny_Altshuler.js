@@ -56,6 +56,7 @@ let contacts = [
 //Function for upload to the page all exist objects
 //Chosed UL for add into it all info about contacts
 const contactsListElement = document.querySelector('.user-list');
+const countOfContact = document.getElementById('count-people')//Choise element from html. It's span with count of all contacts
 
 //Created function forEacb that will upload all elementson the page
 //contact is our Array with objects
@@ -65,6 +66,7 @@ function showContactsList() {
     //Created new element into html
     contactsListElement.insertAdjacentHTML('beforeend', createContacthtml(contact));//Added new contect into UL (html)
   })
+   showContactsCount()//call function that calculates current count of contacts
 }
 
 //Function that return content of contact according to position in the array
@@ -94,3 +96,39 @@ removeAllBTN.addEventListener('click', () => {//created event - click and functi
   contacts.length = 0;
   showContactsList();//Call the function that upload all element(contacts) the page. Now it's - 0
 })
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////Function Sum of Contact Count on top of site page//////////////////
+function showContactsCount() {
+  countOfContact.textContent = contacts.length + " people";
+}
+////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////Search INPUT/////////////////////////////////////////////
+//////////////////////////////////////////Search CONTACT//////////////////////////////////
+//Choses all needed variables. 
+let searchInput = document.getElementById('searchInput')//Search area. Inout area from html file
+// Function that reacts to keyboard actions
+searchInput.addEventListener('input', () => {//reacted if something write in this input
+  //New variable that take value of input search
+  const filter = searchInput.value.toLowerCase();//filter get value
+  //Get LI content from UL that we added above
+  const searchContactList = contactsListElement.querySelectorAll('.user-items');
+
+  //Function that checked all elements with class .user-items (our LI)
+  searchContactList.forEach(contact => {
+    //New Variable that take value from .user-items (our LI)
+    const name = contact.getAttribute('data-name');
+    const phone = contact.getAttribute('data-phone');
+
+    //If element contain printed text on input area it removed class with style display: none;
+    if (name.includes(filter) || phone.includes(filter)) {
+      contact.classList.remove('displayNone')
+    }
+    else {
+      contact.classList.add('displayNone')//if not display style change to displayNone
+    }
+  })
+})
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////

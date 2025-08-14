@@ -107,7 +107,7 @@ function showContactsCount() {
 /////////////////////////////////////////Search INPUT/////////////////////////////////////////////
 //////////////////////////////////////////Search CONTACT//////////////////////////////////
 //Choses all needed variables. 
-let searchInput = document.getElementById('searchInput')//Search area. Inout area from html file
+let searchInput = document.getElementById('searchInput')//Search area. Input area from html file
 // Function that reacts to keyboard actions
 searchInput.addEventListener('input', () => {//reacted if something write in this input
   //New variable that take value of input search
@@ -132,3 +132,39 @@ searchInput.addEventListener('input', () => {//reacted if something write in thi
 })
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Function for deleteting specified user.
+function deleteContact(){
+
+  //Adding event click on ul area 
+  contactsListElement.addEventListener('click', (e) =>{
+        //Checking if area where target the user is a element with class delete-img
+        if (e.target.classList.contains('delete-img')) {
+          //if yes we save container what located near the target area
+          const contactEL = e.target.closest('.user-items');
+          //And also save attribute of this contact
+          const contactID = +contactEL.getAttribute('data-id');
+        
+          //Here we use the filter function for showing contacts that not contains choose id from past step
+          contacts = contacts//If not contains it return new array with other contacts only
+            .filter((elem) => elem.id !== contactID)
+            //now we use function map for return correct ID data. 
+            //Becouse if we delete contact in the middle of list, we also need to change data-id of all contacts that following after
+            .map((elem) => {
+              //if deleted element was from the end, no need to change anythink
+              if (elem.id < contactID) {
+                return elem;
+              }
+             //but if deleted contact was in the middle, need to update data-id attribute of  all contact following after
+              return { ...elem, id: elem.id - 1 }
+            })
+        
+            //In the end we call function that show our array
+        showContactsList();
+      }
+    })
+    }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+

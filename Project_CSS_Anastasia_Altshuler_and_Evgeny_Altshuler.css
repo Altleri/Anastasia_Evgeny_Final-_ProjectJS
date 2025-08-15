@@ -134,8 +134,10 @@ div {
 
 #divImagesAddAndDelete {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 12px;
-  padding-right: 47px;
+  padding-right: 55px;
 }
 
 #add-Person:hover {
@@ -244,7 +246,7 @@ form {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-input-popup form {
+#form-input-popup form {
   background-color: #ffffff;
   border-radius: 8px;
   width: 400px;
@@ -391,7 +393,7 @@ form button:hover,
     font-size: 0.8em;
   }
 
-  .form-input-popup form {
+  #form-input-popup form {
     width: 350px;
   }
 
@@ -407,6 +409,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

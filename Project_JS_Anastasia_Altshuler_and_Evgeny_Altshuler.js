@@ -255,7 +255,7 @@ function editContact(){
                       //Call function to close popup
                       closeAllPopup();
                       saveBotton.removeEventListener('click', saveEditChanging);
-                    })
+                    }
                   }
     
                        saveBotton.addEventListener('click', saveEditChanging);
@@ -379,6 +379,7 @@ function userAreaColorChanging(){
 }
   //Call this function
   userAreaColorChanging()
+
 
 
 

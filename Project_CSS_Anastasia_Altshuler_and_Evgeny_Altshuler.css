@@ -257,6 +257,7 @@ form {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  margin: 10px 0;
 }
 
 .form-group label {
@@ -266,7 +267,8 @@ form {
   font-weight: bold;
 }
 
-.form-group input {
+.form-group input,
+#saveBotton {
   flex-grow: 1;
   margin: 0 2% 0 10%;
   padding: 6px;
@@ -275,7 +277,8 @@ form {
   font-size: 15px;
 }
 
-form button {
+form button,
+#saveBotton {
   margin: 0 2%;
   width: 520px;
   padding: 0.75em;
@@ -286,7 +289,8 @@ form button {
   border: none;
 }
 
-form button:hover {
+form button:hover,
+#saveBotton {
   background: #218838;
 }
 
@@ -295,6 +299,22 @@ form button:hover {
   color: white;
   box-shadow: 0 0 10px rgba(0, 119, 204, 0.3);
 }
+
+.create-form,
+.edit-form,
+.info-form{
+  display: none;
+}
+
+.info-form span
+{
+ padding-left: 50px; 
+}
+
+.info-form{
+  padding-left: 20%;
+}
+
 /*#endregion*/
 /*****************************************************************************************/
 
@@ -387,3 +407,4 @@ form button:hover {
 /*#endregion*/
 
 /*****************************************************************************************/
+

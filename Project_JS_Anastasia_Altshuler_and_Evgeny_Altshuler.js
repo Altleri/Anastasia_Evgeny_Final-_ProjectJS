@@ -62,7 +62,10 @@ const countOfContact = document.getElementById('count-people')//Choise element f
 //contact is our Array with objects
 function showContactsList() {
   contactsListElement.replaceChildren();
-  contacts.forEach((contact) => {
+  contacts
+    //Added alphabetical sorting
+    .sort((a,b) => a.name.localeCompare(b.name))
+    .forEach((contact) => {
     //Created new element into html
     contactsListElement.insertAdjacentHTML('beforeend', createContacthtml(contact));//Added new contect into UL (html)
   })
@@ -340,6 +343,7 @@ function cleanTheInputFormArea()
   contactAge.value="";
   contactImageURL.value="";
 }
+
 
 
 

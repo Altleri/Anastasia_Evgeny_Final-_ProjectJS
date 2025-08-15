@@ -125,11 +125,71 @@
 
   <!-- ---------------------------------------------------Modal POPUP------------------------------------------------->
 
-  <!--INFO POPUP-->
-  <div class="modal" id="infoPopup" class="form-input-popup">
-    <div class="modal-content" id="tabInfoContent">
-      <span id="closeModal" class="close">&times;</span>
-      <div class="form-group">
+  <!-- #region -->
+
+    <div class="modal" id="generalPopup" class="form-input-popup">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <div id="popup-body">
+            <!--ADD PERSON POPUP-->
+        <form class="create-form">
+        <div class="form-group">
+          <label> Name: </label>
+          <input type="text" placeholder="Name" class="popup-user-name" value=""required />
+        </div>
+        <div class="form-group">
+          <label> Phone: </label>
+          <input type="text" placeholder="Phone" class="popup-user-phone" value="" required />
+        </div>
+        <div class="form-group">
+          <label> Address: </label>
+          <input type="text" placeholder="Address" class='popup-user-address' value="" required />
+        </div>
+        <div class="form-group">
+          <label> Age: </label>
+          <input type="text" placeholder="Age" class="popup-user-age" value="" required />
+        </div>
+        <div class="form-group image-lable">
+          <label> Image URL: </label>
+          <input type="text" placeholder="Image URL" class="popup-user-image" value="" required />
+        </div>
+        <div class="form-group save-botton">
+          <button id="saveBotton" type="submit">Save</button>
+        </div>
+      </form>
+      <!---------------------------------------------------------------------------------------------------------------------->
+
+      <!--EDIT PERSON POPUP-->
+      <form class="edit-form">
+        <div class="form-group">
+          <label> Name: </label>
+          <input type="text" placeholder="Name" class="popup-user-name" value="" required />
+        </div>
+        <div class="form-group">
+          <label> Phone: </label>
+          <input type="text" placeholder="Phone" class="popup-user-phone" value="" required />
+        </div>
+        <div class="form-group">
+          <label> Address: </label>
+          <input type="text" placeholder="Address" class='popup-user-address' value="" required />
+        </div>
+        <div class="form-group">
+          <label> Age: </label>
+          <input type="text" placeholder="Age" class="popup-user-age" value="" required />
+        </div>
+        <div class="form-group image-lable">
+          <label> Image URL: </label>
+          <input type="text" placeholder="Image URL" class="popup-user-image" value="" required />
+        </div>
+        <div class="form-group save-botton">
+          <button id="saveBotton" class="save-botton" type="submit">Save</button>
+        </div>
+      </form>
+      <!---------------------------------------------------------------------------------------------------------------------->
+
+      <!--INFO POPUP-->
+      <form class="info-form">
+        <div class="form-group">
         <label> Name:</label>
         <span class='current-user-name'></span>
       </div>
@@ -145,81 +205,16 @@
         <label> Address: </label>
         <span class='current-user-address'></span>
       </div>
-      
-    </div>
-  </div>
-
-  <!---------------------------------------------------------------------------------------------------------------------->
-  <!--ADD PERSON POPUP-->
-  <div class="modal" id="addingPopup" class="form-input-popup">
-    <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
-      <form>
-        <div class="form-group">
-          <label> Name: </label>
-          <input type="text" placeholder="Name" class="new-user-name" required />
-        </div>
-        <div class="form-group">
-          <label> Phone: </label>
-          <input type="text" placeholder="Phone" class="new-user-phone" required />
-        </div>
-        <div class="form-group">
-          <label> Address: </label>
-          <input type="text" placeholder="Address" class='new-user-address' required />
-        </div>
-        <div class="form-group">
-          <label> Age: </label>
-          <input type="text" placeholder="Age" class="new-user-age" required />
-        </div>
-        <div class="form-group">
-          <label> Image URL: </label>
-          <input type="text" placeholder="Image URL" class="new-user-image" required />
-        </div>
-        <div class="form-group">
-          <button class="save-botton" id="addSaveButton" type="submit">Save</button>
-        </div>
       </form>
-    </div>
-  </div>
-  <!---------------------------------------------------------------------------------------------------------------------->
 
-
-  <!---------------------------------------------------------------------------------------------------------------------->
-  <!--EDIT PERSON POPUP-->
-  <div class="modal" id="editPopup" class="form-input-popup">
-    <div class="modal-content">
-      <span id="closeModal" class="close">&times;</span>
-      <form>
-        <div class="form-group">
-          <label> Name: </label>
-          <input type="text" placeholder="Name" class="edit-user-name" required />
-        </div>
-        <div class="form-group">
-          <label> Phone: </label>
-          <input type="text" placeholder="Phone" class="edit-user-phone" required />
-        </div>
-        <div class="form-group">
-          <label> Address: </label>
-          <input type="text" placeholder="Address" class='edit-user-address' required />
-        </div>
-        <div class="form-group">
-          <label> Age: </label>
-          <input type="text" placeholder="Age" class="edit-user-age" required />
-        </div>
-        <div class="form-group">
-          <label> Image URL: </label>
-          <input type="text" placeholder="Image URL" class="edit-user-image" required />
-        </div>
-        <div class="form-group">
-          <button class="save-botton" id="editSaveBottom" type="submit">Save</button>
-        </div>
-      </form>
     </div>
-  </div>
+    </div>
+    </div>
   <!---------------------------------------------------------------------------------------------------------------------->
   <script src="Project_JS_Anastasia_Altshuler_and_Evgeny_Altshuler.js"></script>
 </body>
 
 
 </html>
+
 

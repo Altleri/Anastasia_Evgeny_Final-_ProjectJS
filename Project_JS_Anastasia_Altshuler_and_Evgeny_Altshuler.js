@@ -365,22 +365,30 @@ function cleanTheInputFormArea()
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//Created function that changing color of contact area when cursor on it
-function userAreaColorChanging(){
-      //Get the ALL li of user from ul.
-      const userItemsElement =document.querySelectorAll('.user-items')
-     //Use function forEach for check all li
-      userItemsElement.forEach(elem =>{
-      elem.addEventListener('mouseover', () => {
-      elem.classList.add('userItems-colorchanging')//if mouse on it, change the color via adding new class
-    })
-      elem.addEventListener('mouseout', () =>{
-      elem.classList.remove('userItems-colorchanging')//if mouse out, remove this class
-      })
-    })
-}
+//Get user LI
+const userItemsElement =document.querySelectorAll('.user-items')
+        //Created function that changing color of contact area when cursor on it
+        function userAreaColorChanging(){
+          //Created event target
+          contactsListElement.addEventListener('mouseover', (e) =>{
+            //Created new variable that take value of element on with the user targeted
+            const contactLI = e.target.closest('.user-items')
+            //If user target on LI it changed class to userItems-colorchanging that change color of area
+            if(contactLI){
+              contactLI.classList.add('userItems-colorchanging')
+            }
+        })
+          //Samew function, but it remove class if mouseout
+          contactsListElement.addEventListener('mouseout', (e) =>{
+            const contactLI = e.target.closest('.user-items')
+            if(contactLI){
+              contactLI.classList.remove('userItems-colorchanging')
+            }
+          })
+        }
   //Call this function
   userAreaColorChanging()
+
 
 
 

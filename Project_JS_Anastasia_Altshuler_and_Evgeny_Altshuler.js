@@ -320,6 +320,9 @@ addNewContact.addEventListener('click', () => {
             cleanTheInputFormArea();
             //call show contact for update our contact list
             showContactsList();
+            closeAllPopup()
+          //Removed event for fixing the dublicate issue
+            createSaveBotton.removeEventListener('click',addSendData);
     }
 }//close the function addSendData
 
@@ -376,6 +379,7 @@ function userAreaColorChanging(){
 }
   //Call this function
   userAreaColorChanging()
+
 
 
 

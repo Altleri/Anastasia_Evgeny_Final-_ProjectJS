@@ -138,7 +138,7 @@ div {
   padding-right: 47px;
 }
 
-#addPerson:hover {
+.addPerson:hover {
   transform: scale(1.2)
 }
 
@@ -407,4 +407,5 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 

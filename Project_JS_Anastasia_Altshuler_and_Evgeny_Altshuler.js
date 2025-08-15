@@ -313,7 +313,7 @@ addNewContact.addEventListener('click', () => {
             //call show contact for update our contact list
             showContactsList();
     }
-}//close thw function addSendData
+}//close the function addSendData
 
 //Added event click to our save botton and call the function addSendData
 createSaveBotton.addEventListener('click',addSendData);
@@ -340,5 +340,6 @@ function cleanTheInputFormArea()
   contactAge.value="";
   contactImageURL.value="";
 }
+
 
 

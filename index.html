@@ -15,16 +15,16 @@
 </head>
 
 <body>
-  <!-----------------------------------TITLE OF SITE---------------------------------------->
+  <!--TITLE OF SITE-->
   <header class="mainHeader">
     <div class="divInHeader">
       <h1 id="h1PhoneBook">Phone Book</h1>
     </div>
   </header>
-  <!----------------------------------------------------------------------------------------------->
+  <!---->
 
   <main>
-    <!----------------------Input of Search Contact + Icons ADD and DELETE the contact------------>
+    <!--Input of Search Contact + Icons ADD and DELETE the contact-->
     <section class="searchcontact" id="textinputAddAndDelete">
       <div class="countOfContact">
         <span class="countOfContact" id="count-people"></span><!--count of contacts-->
@@ -39,95 +39,31 @@
         </div>
       </div>
     </section>
-    <!---------------------------------------------------------------------------------------------------------------------->
+    <!---->
 
-    <!-----------------------------------------List of CONTACTS----------------------------------------->
+    <!--List of CONTACTS-->
     <section class="section-contact-list">
       <ul class="user-list">
-<!--         <li class="user-items"> 
-            <div class="user-info">
-              <img src="./image/contact1.png" alt="contact1" title="Bertie Yates" class="avatar">
-              <span class="user-name">Bertie Yates</span>
-            </div>
-            <div class="user-actions">
-              <i class="info action-icon"><img src="./image/infoicon.png" alt="infoicon" title="info"></i>
-              <i class="edit action-icon"><img src="./image/linepenpencilicon.png" alt="penicon" title="edit"></i>
-              <i class="delete action-icon"><img src="./image/trashbasketdeleteremoveicon2.png" alt="trashbasket2"
-                  title="delete"></i>
-            </div>
-          </li>
-
-          <li class="user-items">
-            <div class="user-info">
-              <img src="./image/contact2.png" alt="contact1" title="Bertie Yates" class="avatar">
-              <span class="user-name">Hester Hogan</span>
-            </div>
-            <div class="user-actions">
-              <i class="info action-icon"><img src="./image/infoicon.png" alt="infoicon" title="info"></i>
-              <i class="edit action-icon"><img src="./image/linepenpencilicon.png" alt="penicon" title="edit"></i>
-              <i class="delete action-icon"><img src="./image/trashbasketdeleteremoveicon2.png" alt="trashbasket2"
-                  title="delete"></i>
-            </div>
-          </li>
-
-          <li class="user-items">
-            <div class="user-info">
-              <img src="./image/contact3.png" alt="contact1" title="Bertie Yates" class="avatar">
-              <span class="user-name">Larry Little</span>
-            </div>
-            <div class="user-actions">
-              <i class="info action-icon"><img src="./image/infoicon.png" alt="infoicon" title="info"></i>
-              <i class="edit action-icon"><img src="./image/linepenpencilicon.png" alt="penicon" title="edit"></i>
-              <i class="delete action-icon"><img src="./image/trashbasketdeleteremoveicon2.png" alt="trashbasket2"
-                  title="delete"></i>
-            </div>
-          </li>
-
-          <li class="user-items">
-            <div class="user-info">
-              <img src="./image/seanWalsh.png" alt="contact1" title="Bertie Yates" class="avatar">
-              <span class="user-name">Sean Walsh</span>
-            </div>
-            <div class="user-actions">
-              <i class="info action-icon"><img src="./image/infoicon.png" alt="infoicon" title="info"></i>
-              <i class="edit action-icon"><img src="./image/linepenpencilicon.png" alt="penicon" title="edit"></i>
-              <i class="delete action-icon"><img src="./image/trashbasketdeleteremoveicon2.png" alt="trashbasket2"
-                  title="delete"></i>
-            </div>
-          </li>
-
-          <li class="user-items">
-            <div class="user-info">
-              <img src="./image/carryJonh.png" alt="contact1" title="Bertie Yates" class="avatar">
-              <span class="user-name">Carry Jonh</span>
-            </div>
-            <div class="user-actions">
-              <i class="info action-icon"><img src="./image/infoicon.png" alt="infoicon" title="info"></i>
-              <i class="edit action-icon"><img src="./image/linepenpencilicon.png" alt="penicon" title="edit"></i>
-              <i class="delete action-icon"><img src="./image/trashbasketdeleteremoveicon2.png" alt="trashbasket2"
-                  title="delete"></i>
-            </div>
-          </li>   -->
       </ul>
     </section>
-    <!------------------------------------------------------------------------------------------------>
+    <!----->
   </main>
 
 
-  <!---------------------------------------------------------------------------------------------------------------------->
+  <!---->
   <footer><!--copy rights-->
     <div class="footer">
       <p>&copy; 2025 My Phone Book. All rights reserved.</p>
     </div>
   </footer>
-  <!---------------------------------------------------------------------------------------------------------------------->
+  <!---->
 
 
-  <!-- ---------------------------------------------------Modal POPUP------------------------------------------------->
+  <!--Modal POPUP-->
 
-  <!-- #region -->
+  <!--#region -->
 
-    <div class="modal" id="generalPopup" class="form-input-popup">
+    <div class="modal form-input-popup" id="generalPopup">
       <div class="modal-content">
         <span id="closeModal" class="close">&times;</span>
         <div id="popup-body">
@@ -135,7 +71,7 @@
         <form class="create-form">
         <div class="form-group">
           <label> Name: </label>
-          <input type="text" placeholder="Name" class="popup-user-name" value=""required />
+          <input type="text" placeholder="Name" class="popup-user-name" value="" required />
         </div>
         <div class="form-group">
           <label> Phone: </label>
@@ -154,7 +90,7 @@
           <input type="text" placeholder="Image URL" class="popup-user-image" value="" required />
         </div>
         <div class="form-group save-botton">
-          <button id="saveBotton" type="submit">Save</button>
+          <button class="save-botton" type="submit">Save</button>
         </div>
       </form>
       <!---------------------------------------------------------------------------------------------------------------------->
@@ -182,7 +118,7 @@
           <input type="text" placeholder="Image URL" class="popup-user-image" value="" required />
         </div>
         <div class="form-group save-botton">
-          <button id="saveBotton" class="save-botton" type="submit">Save</button>
+          <button class="save-botton" type="submit">Save</button>
         </div>
       </form>
       <!---------------------------------------------------------------------------------------------------------------------->
@@ -216,6 +152,7 @@
 
 
 </html>
+
 
 
 

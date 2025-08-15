@@ -246,13 +246,13 @@ form {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-#form-input-popup form {
+/* #form-input-popup form {
   background-color: #ffffff;
   border-radius: 8px;
   width: 400px;
   padding: 10px;
   margin-left: 3%;
-}
+} */
 
 .form-group {
   padding-top: 2%;
@@ -393,9 +393,9 @@ form button:hover,
     font-size: 0.8em;
   }
 
-  #form-input-popup form {
+/*   #form-input-popup form {
     width: 350px;
-  }
+  } */
 
   .form-group input {
     width: 60%;
@@ -409,6 +409,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

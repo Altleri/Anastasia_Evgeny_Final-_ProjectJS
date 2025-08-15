@@ -238,7 +238,7 @@ function editContact(){
 
               
                       //Added event on click
-                      saveBotton.addEventListener('click', (e) => {
+                      function saveEditChanging (e){
                       e.preventDefault();//for inputs
                       //Conacts that we choosed in function that opened edit popup
                       //Saved new provided information 
@@ -249,11 +249,16 @@ function editContact(){
                       elem.imageUrl = editForm.querySelector('.popup-user-image').value;
                       //Message
                       alert("Saved")
-                      //Call two functions. Clean inputs liners from data and show contact to update showing information
+                      //Call functions. Clean inputs liners from data and show contact to update showing information
                       cleanTheInputFormArea();
                       showContactsList();
+                      //Call function to close popup
+                      closeAllPopup();
+                      saveBotton.removeEventListener('click', saveEditChanging);
                     })
                   }
+    
+                       saveBotton.addEventListener('click', saveEditChanging);
          })
       }
 ////////////////////////////////////////////////
@@ -332,6 +337,15 @@ const closeGeneralPopup = document.getElementById('closeModal');
     document.querySelector('.create-form').style.display ='none';
     document.querySelector('.edit-form').style.display ='none';
   })
+//////////////////////////////////////////////////////////////////////////////////////////////
+//Additional function that closed all popup
+function closeAllPopup(){
+    generalPopup.style.display = 'none';
+    document.querySelector('.info-form').style.display ='none';
+    document.querySelector('.create-form').style.display ='none';
+    document.querySelector('.edit-form').style.display ='none';
+}
+///////////////////////////////////////////////////////////////////////////////////////////////
 
  //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Create function for cleare input area
@@ -343,6 +357,26 @@ function cleanTheInputFormArea()
   contactAge.value="";
   contactImageURL.value="";
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Created function that changing color of contact area when cursor on it
+function userAreaColorChanging(){
+      //Get the ALL li of user from ul.
+      const userItemsElement =document.querySelectorAll('.user-items')
+     //Use function forEach for check all li
+      userItemsElement.forEach(elem =>{
+      elem.addEventListener('mouseover', () => {
+      elem.classList.add('userItems-colorchanging')//if mouse on it, change the color via adding new class
+    })
+      elem.addEventListener('mouseout', () =>{
+      elem.classList.remove('userItems-colorchanging')//if mouse out, remove this class
+      })
+    })
+}
+  //Call this function
+  userAreaColorChanging()
+
 
 
 

@@ -137,7 +137,7 @@ div {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding-right: 55px;
+  padding-right: 5px;
 }
 
 #add-Person:hover {
@@ -177,12 +177,12 @@ div {
   box-sizing: border-box;
 }
 
-.user-items:hover {
+//Style for mouseon changing user color area
+.userItems-colorchanging{
   background-color: #5e5e5f0f;
   border: 0.5px solid rgba(178, 193, 230, 0.425);
   box-shadow: 0 2px 4px rgba(178, 193, 230, 0.758);
   /* Gradient* of shadow*/
-
 }
 
 .user-info {
@@ -409,6 +409,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

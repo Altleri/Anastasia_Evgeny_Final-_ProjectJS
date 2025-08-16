@@ -360,7 +360,12 @@ form button:hover,
 .dark-theme {
   background: #1e1e1e;
   color: #f4f4f4;
-
+  .countOfContact{
+    color:black;
+  }
+  .user-name{
+    color:black
+  }
 }
 
 .dark-theme main {
@@ -524,6 +529,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

@@ -96,7 +96,10 @@ showContactsList();//Call the function that upload all element(contacts) the pag
 //This function will be removed all contacts when clinet click on "remove-all-btn" (img)
 const removeAllBTN = document.querySelector('.remove-all-btn')//get class on elem img
 removeAllBTN.addEventListener('click', () => {//created event - click and function that give to our array, length value = 0
+  if(confirm('You want to delete all contacts?'))
+  {
   contacts.length = 0;
+  }
   showContactsList();//Call the function that upload all element(contacts) the page. Now it's - 0
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -148,7 +151,8 @@ function deleteContact(){
           const contactEL = e.target.closest('.user-items');
           //And also save attribute of this contact
           const contactID = +contactEL.getAttribute('data-id');
-        
+
+           if(confirm('You want to delete user?')){
           //Here we use the filter function for showing contacts that not contains choose id from past step
           contacts = contacts//If not contains it return new array with other contacts only
             .filter((elem) => elem.id !== contactID)
@@ -162,6 +166,7 @@ function deleteContact(){
              //but if deleted contact was in the middle, need to update data-id attribute of  all contact following after
               return { ...elem, id: elem.id - 1 }
             })
+           }
         
             //In the end we call function that show our array
         showContactsList();
@@ -388,6 +393,7 @@ const userItemsElement =document.querySelectorAll('.user-items')
         }
   //Call this function
   userAreaColorChanging()
+
 
 
 

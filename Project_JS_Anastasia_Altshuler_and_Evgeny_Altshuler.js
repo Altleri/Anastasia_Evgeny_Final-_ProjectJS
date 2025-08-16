@@ -80,8 +80,8 @@ function createContacthtml(contact) {
             <span class="user-name" >${contact.name}</span>
           </div>
           <div class="user-actions">
-            <i class="info action-icon"><img src="./image/infoicon.png" alt="infoicon" title="info"></i>
-            <i class="edit action-icon"><img src="./image/linepenpencilicon.png" alt="penicon" title="edit"></i>
+            <i class="info action-icon"><img class="info-img" src="./image/infoicon.png" alt="infoicon" title="info"></i>
+            <i class="edit action-icon"><img class="edit-img" src="./image/linepenpencilicon.png" alt="penicon" title="edit"></i>
             <i class="delete action-icon"><img class="delete-img" src="./image/trashbasketdeleteremoveicon2.png" alt="trashbasket2"
                 title="delete"></i>
           </div>
@@ -388,6 +388,7 @@ const userItemsElement =document.querySelectorAll('.user-items')
         }
   //Call this function
   userAreaColorChanging()
+
 
 
 

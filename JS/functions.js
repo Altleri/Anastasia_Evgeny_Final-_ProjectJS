@@ -227,6 +227,12 @@ function editContact(){
                       elem.address = editForm.querySelector('.popup-user-address').value;
                       elem.age = editForm.querySelector('.popup-user-age').value;
                       elem.imageUrl = editForm.querySelector('.popup-user-image').value;
+                      //Checked if all fields is NOT empty
+                      if(!elem.name.trim() || !elem.phone.trim() || !elem.address.trim() || !elem.age.trim() || !elem.imageUrl.trim())
+                      {//If one of them empty show this message
+                        alert("All fields required!")
+                      }//If all good we continue
+                      else{
                       //Message
                       alert("Saved")
                       //Call two functions. Clean inputs liners from data and show contact to update showing information
@@ -234,13 +240,12 @@ function editContact(){
                       showContactsList();
                       closeAllPopup()
                       saveBotton.removeEventListener('click', saveEditChanging);
+                      }
                     }
-
                     //Added event on click
                     saveBotton.addEventListener('click', saveEditChanging);
                     
                   }
-
          })
       }
 
@@ -350,4 +355,5 @@ function userAreaColorChanging(){
             }
           })
         }
+
 

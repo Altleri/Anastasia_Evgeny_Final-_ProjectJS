@@ -10,13 +10,14 @@
 
 /////////////////////////////////ADD HTML ELEMENT INTO UL VIA JS///////////////////////////
 
-//Function for upload to the page all exist objects
+
 //Chosed UL for add into it all info about contacts
 const contactsListElement = document.querySelector('.user-list');
-const countOfContact = document.getElementById('count-people')//Choise element from html. It's span with count of all contacts
+const countOfContact = document.getElementById('count-people');//Choise element from html. It's span with count of all contacts
 //This function will be removed all contacts when clinet click on "remove-all-btn" (img)
-const removeAllBTN = document.querySelector('.remove-all-btn')//get class on elem img
-let searchInput = document.getElementById('searchInput')//Search area. Inout area from html file
+const removeAllBTN = document.querySelector('.remove-all-btn');//get class on elem img
+//Search area. Input area from html file
+let searchInput = document.getElementById('searchInput');
 
 //Setting of popup. Take elements of popup from HTML
 const generalPopup = document.getElementById('generalPopup');
@@ -25,11 +26,14 @@ const contactPhone = document.querySelector('.popup-user-phone');
 const contactAddress = document.querySelector('.popup-user-address');
 const contactAge = document.querySelector('.popup-user-age');
 const contactImageURL = document.querySelector('.popup-user-image');
+
 //Take element from html. It's add img
 const addNewContact = document.getElementById('add-Person')
 
 //Get X that close the popup
 const closeGeneralPopup = document.getElementById('closeModal');
+//Element for changing theme  of body(color)
+const themeBtn = document.querySelector('.change-backgroundThem');
 
 //Created function forEach that will upload all elementson the page
 //contact is our Array with objects
@@ -63,11 +67,9 @@ function createContacthtml(contact) {
           </li>
         `
 }
-
-
 /////////////////////////////////////////////////END/////////////////////////////////////////////////
 
-
+//Function that removed all contacts from the page
 function removeAllContacts(){
 removeAllBTN.addEventListener('click', () => {//created event - click and function that give to our array, length value = 0
   if(confirm('You want to delete all contacts?'))
@@ -307,11 +309,10 @@ addNewContact.addEventListener('click', () => {
 
 //Added event click to our save botton and call the function addSendData
 createSaveBotton.addEventListener('click',addSendData);
-
 })
 }
 
-
+//Function that close all opened popup if user click on X(close element)
 function hidePopupByClickOnClose(){
 //The event on click on close popup botton. This click will close all opened popups
   closeGeneralPopup.addEventListener('click', () => {
@@ -322,7 +323,7 @@ function hidePopupByClickOnClose(){
   })
 }
 
-
+//Function that close all opened popup if we call this function
   function closeAllPopup(){
     generalPopup.style.display = 'none';
     document.querySelector('.info-form').style.display ='none';
@@ -340,20 +341,36 @@ function cleanTheInputFormArea()
   contactImageURL.value="";
 }
   
-  
+  //Function that change background color if user mouseover and mouseout cursor
 function userAreaColorChanging(){
+          //Added event on mouseover and target effect
           contactsListElement.addEventListener('mouseover', (e) =>{
+            //Save value of element that located closest to UL where user targeted
             const contactLI = e.target.closest('.user-items')
             if(contactLI){
+              //Check which class have a our body. If the theme is dark, it will be some colors, if it is light, than other colors
+              if(document.body.classList.contains('dark-theme'))
+              {
+                contactLI.classList.add('userItems-Darkcolorchanging')
+              }else{
               contactLI.classList.add('userItems-colorchanging')
             }
-        })
+            }
+        })//some process if user mouseout 
           contactsListElement.addEventListener('mouseout', (e) =>{
             const contactLI = e.target.closest('.user-items')
             if(contactLI){
               contactLI.classList.remove('userItems-colorchanging')
+              contactLI.classList.remove('userItems-Darkcolorchanging')
             }
           })
-        }
 
+         }
 
+//Function that change theme of our page
+function darkThemAnimation(){
+  //if user click on element; the them of body will changed
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');    
+})
+};

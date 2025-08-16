@@ -9,3 +9,4 @@ editContact();
 addNewContactToArray();
 hidePopupByClickOnClose();
 userAreaColorChanging();
+darkThemAnimation();

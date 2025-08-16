@@ -67,7 +67,7 @@ function createContacthtml(contact) {
           </li>
         `
 }
-/////////////////////////////////////////////////END/////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Function that removed all contacts from the page
 function removeAllContacts(){
@@ -86,12 +86,12 @@ removeAllBTN.addEventListener('click', () => {//created event - click and functi
 
 ////////////////////////////Function Sum of Contact Count on top of site page//////////////////
 function showContactsCount() {
-  countOfContact.textContent = contacts.length + " people";
+  countOfContact.textContent = contacts.length + " people";//Our span = length of array
 }
-////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 
-/////////////////////////////////////////Search INPUT/////////////////////////////////////////////
+
 //////////////////////////////////////////Search CONTACT///////////////////////////////// 
 
 // Function that reacts to keyboard actions
@@ -119,10 +119,9 @@ searchInput.addEventListener('input', (e) => {//reacted if something write in th
 })
 }
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Function for deleteting specified user.
 function deleteContact(){
@@ -159,7 +158,9 @@ function deleteContact(){
     })
     }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Create popup that show current information about the contact
 function showInfoContact(){
    //Adding event click on ul area 
@@ -187,8 +188,9 @@ function showInfoContact(){
         }
       })
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Function that get to edit contact information
 function editContact(){
    //Adding event click on ul area 
@@ -237,22 +239,24 @@ function editContact(){
                       else{
                       //Message
                       alert("Saved")
-                      //Call two functions. Clean inputs liners from data and show contact to update showing information
+                      //Call functions. Clean inputs liners from dat, show contact to update showing information and close all popup windows
                       cleanTheInputFormArea();
                       showContactsList();
                       closeAllPopup()
+                      //In the end we removed event click to avoid duplicates
                       saveBotton.removeEventListener('click', saveEditChanging);
                       }
                     }
-                    //Added event on click
+                    //Added event click on save button
                     saveBotton.addEventListener('click', saveEditChanging);
                     
                   }
          })
       }
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Function that added new contact in our contact list (array)
 function addNewContactToArray(){
 //Added event on click on this element
 addNewContact.addEventListener('click', () => {
@@ -302,16 +306,20 @@ addNewContact.addEventListener('click', () => {
             cleanTheInputFormArea();
             //call show contact for update our contact list
             showContactsList();
-            closeAllPopup()
+            //Call function that close all popup windows
+            closeAllPopup();
+             //In the end we removed event click to avoid duplicates
             createSaveBotton.removeEventListener('click',addSendData);
     }
-}//close thw function addSendData
+}//close the function addSendData
 
 //Added event click to our save botton and call the function addSendData
 createSaveBotton.addEventListener('click',addSendData);
 })
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Function that close all opened popup if user click on X(close element)
 function hidePopupByClickOnClose(){
 //The event on click on close popup botton. This click will close all opened popups
@@ -330,6 +338,7 @@ function hidePopupByClickOnClose(){
     document.querySelector('.create-form').style.display ='none';
     document.querySelector('.edit-form').style.display ='none';
 }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Create function for clear input area
 function cleanTheInputFormArea()
@@ -340,7 +349,9 @@ function cleanTheInputFormArea()
   contactAge.value="";
   contactImageURL.value="";
 }
-  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //Function that change background color if user mouseover and mouseout cursor
 function userAreaColorChanging(){
           //Added event on mouseover and target effect
@@ -367,6 +378,10 @@ function userAreaColorChanging(){
 
          }
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //Function that change theme of our page
 function darkThemAnimation(){
   //if user click on element; the them of body will changed
@@ -374,3 +389,4 @@ themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');    
 })
 };
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////

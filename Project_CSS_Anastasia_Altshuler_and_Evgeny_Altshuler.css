@@ -496,6 +496,10 @@ form button:hover,
   justify-items:center;
   width:90%;
 }
+   .change-backgroundThem {
+    right: 3px;
+    bottom: 10px; 
+}
 
 }
 
@@ -525,10 +529,16 @@ form button:hover,
   .user-name{
     font-size: 13px;
   }
+  
+   .change-backgroundThem {
+    right: 5px;
+    bottom: 10px; 
+}
 }
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

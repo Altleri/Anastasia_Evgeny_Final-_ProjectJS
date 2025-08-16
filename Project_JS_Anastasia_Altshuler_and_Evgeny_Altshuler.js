@@ -370,8 +370,6 @@ function cleanTheInputFormArea()
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//Get user LI
-const userItemsElement =document.querySelectorAll('.user-items')
         //Created function that changing color of contact area when cursor on it
         function userAreaColorChanging(){
           //Created event target
@@ -383,7 +381,7 @@ const userItemsElement =document.querySelectorAll('.user-items')
               contactLI.classList.add('userItems-colorchanging')
             }
         })
-          //Samew function, but it remove class if mouseout
+          //Same function, but it remove class if mouseout
           contactsListElement.addEventListener('mouseout', (e) =>{
             const contactLI = e.target.closest('.user-items')
             if(contactLI){
@@ -391,8 +389,10 @@ const userItemsElement =document.querySelectorAll('.user-items')
             }
           })
         }
+
   //Call this function
   userAreaColorChanging()
+
 
 
 

@@ -376,7 +376,7 @@ form button:hover,
   }
 
   main {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
   }
 
@@ -414,12 +414,11 @@ form button:hover,
 }
   
 .modal-content{
-  justify-items:center
+  justify-items:center;
+  width:90%;
 }
 
 }
-
-
 
 @media only screen and (min-width:430px)and (max-width:541px){
   
@@ -451,6 +450,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

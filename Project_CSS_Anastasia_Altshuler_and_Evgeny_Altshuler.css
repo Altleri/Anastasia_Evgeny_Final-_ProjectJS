@@ -315,7 +315,7 @@ form button:hover,
 }
 
 .info-form{
-  padding-left: 20%;
+  padding-left: 15%;
 }
 /*#endregion*/
 
@@ -386,7 +386,7 @@ form button:hover,
 }
 
 .dark-theme .modal-content {
-  background: #979595;
+  background: #f9f9f9;
   color: #000000;
 }
 
@@ -489,6 +489,14 @@ form button:hover,
   padding-left: 5%;
   width: 90%;
 }
+
+  .info-form span {
+  padding-left: 22px;
+}
+
+.form-group label {
+    padding-right: 15px;
+}
   
 .edit-form,
 .create-form{
@@ -512,6 +520,10 @@ form button:hover,
   .textIfContactListIsEmpty{
     font-size: 30px;
   }
+
+    .form-group input, #saveBotton {
+    margin: 0 2% 0 5%;
+}
 
 }
 
@@ -546,10 +558,24 @@ form button:hover,
     right: 5px;
     bottom: 10px; 
 }
+  .info-form span {
+  padding-left: 30px;
+}
+
+.form-group label {
+    padding-right: 15px;
+}
+  
+ .form-group input, #saveBotton {
+    margin: 0 2% 0 5%;
+}
+
+  
 }
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

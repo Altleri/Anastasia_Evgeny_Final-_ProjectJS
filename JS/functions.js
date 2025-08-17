@@ -35,6 +35,9 @@ const closeGeneralPopup = document.getElementById('closeModal');
 //Element for changing theme  of body(color)
 const themeBtn = document.querySelector('.change-backgroundThem');
 
+//Text that will be hidden by default and will appear if the contact list is empty.
+const textIfContactListIsEmpty = document.querySelector('.textIfContactListIsEmpty')
+
 //Created function forEach that will upload all elementson the page
 //contact is our Array with objects
 function showContactsList() {
@@ -48,6 +51,7 @@ function showContactsList() {
     contactsListElement.insertAdjacentHTML('beforeend', createContacthtml(contact));//Added new contect into UL (html)
   })
    showContactsCount()//call function that calculates current count of contacts
+   textAppearIfContactsLengthIs0();//Check contacts length
 }
 
 
@@ -77,6 +81,7 @@ removeAllBTN.addEventListener('click', () => {//created event - click and functi
   contacts.length = 0;
   }
   showContactsList();//Call the function that upload all element(contacts) the page. Now it's - 0
+  textAppearIfContactsLengthIs0();//Check contacts length
 })
 }
 
@@ -154,6 +159,7 @@ function deleteContact(){
         
             //In the end we call function that show our array
         showContactsList();
+        textAppearIfContactsLengthIs0();
       }
     })
     }
@@ -390,3 +396,15 @@ themeBtn.addEventListener('click', () => {
 })
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Function that checked length of our array and if it 0 (non contacts on the page) it gives the message
+function textAppearIfContactsLengthIs0() {
+  if(contacts.length==0)//Check if length of array is 0
+  {
+    textIfContactListIsEmpty.style.display = 'block'//give to span with text display block
+  }else {//if any contacts there on the list, the function hide the text
+    textIfContactListIsEmpty.style.display = 'none';
+  }
+}
+
+

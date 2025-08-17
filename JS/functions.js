@@ -23,6 +23,7 @@ let searchInput = document.getElementById('searchInput');
 const generalPopup = document.getElementById('generalPopup');
 const contactName = document.querySelector('.popup-user-name');
 const contactPhone = document.querySelector('.popup-user-phone');
+const contactEmail = document.querySelector('.popup-user-email');
 const contactAddress = document.querySelector('.popup-user-address');
 const contactAge = document.querySelector('.popup-user-age');
 const contactImageURL = document.querySelector('.popup-user-image');
@@ -183,6 +184,7 @@ function showInfoContact(){
         //Popup lines take the value of the contact the user clicked on
         document.querySelector('.current-user-name').textContent = elem.name;
         document.querySelector('.current-user-phone').textContent = elem.phone;
+        document.querySelector('.current-user-email').textContent = elem.email;
         document.querySelector('.current-user-age').textContent = elem.age; 
         document.querySelector('.current-user-address').textContent = elem.address;
         
@@ -222,6 +224,7 @@ function editContact(){
               //Open popup will be in personal data of the cintact in inputs
               editForm.querySelector('.popup-user-name').value = elem.name;
               editForm.querySelector('.popup-user-phone').value = elem.phone;
+              editForm.querySelector('.popup-user-email').value = elem.email;
               editForm.querySelector('.popup-user-age').value = elem.age;
               editForm.querySelector('.popup-user-address').value = elem.address;
               editForm.querySelector('.popup-user-image').value = elem.imageUrl;
@@ -234,11 +237,12 @@ function editContact(){
                       //Saved new provided information 
                       elem.name = editForm.querySelector('.popup-user-name').value;
                       elem.phone = editForm.querySelector('.popup-user-phone').value;
+                      elem.email = editForm.querySelector('.popup-user-email').value;
                       elem.address = editForm.querySelector('.popup-user-address').value;
                       elem.age = editForm.querySelector('.popup-user-age').value;
                       elem.imageUrl = editForm.querySelector('.popup-user-image').value;
                       //Checked if all fields is NOT empty
-                      if(!elem.name.trim() || !elem.phone.trim() || !elem.address.trim() || !elem.age.trim() || !elem.imageUrl.trim())
+                      if(!elem.name.trim() || !elem.phone.trim() || !elem.address.trim() || !elem.age.trim() || !elem.imageUrl.trim() || !elem.email.trim())
                       {//If one of them empty show this message
                         alert("All fields required!")
                       }//If all good we continue
@@ -283,12 +287,13 @@ addNewContact.addEventListener('click', () => {
       //Created new variable that will take new value from inputs of creatForm
       const newContactName = createForm.querySelector('.popup-user-name').value;
       const newContactPhone = createForm.querySelector('.popup-user-phone').value;
+      const newContactEmail = createForm.querySelector('.popup-user-email').value;
       const newContactAddress = createForm.querySelector('.popup-user-address').value;
       const newContactAge = createForm.querySelector('.popup-user-age').value;
       const newContactImage = createForm.querySelector('.popup-user-image').value;
 
       //Check if inputs they are not empty
-      if (!newContactName.trim() || !newContactPhone.trim() || !newContactAddress.trim() || !newContactAge.trim() || !newContactImage.trim()) {
+      if (!newContactName.trim() || !newContactPhone.trim() || !newContactAddress.trim() || !newContactAge.trim() || !newContactImage.trim() || !newContactEmail.trim()) {
         alert("All fields required!")//if one of them empty, show this message
       } else {
         //Of all good, create new object this provided data
@@ -296,6 +301,7 @@ addNewContact.addEventListener('click', () => {
             id: contacts.length + 1,
             name: newContactName,
             address: newContactAddress,
+            email: newContactEmail,
             age: newContactAge,
             phone: newContactPhone,
             imageUrl: newContactImage
@@ -351,6 +357,7 @@ function cleanTheInputFormArea()
 {
   contactName.value="";
   contactPhone.value="";
+  contactEmail.value="";
   contactAddress.value="";
   contactAge.value="";
   contactImageURL.value="";
@@ -406,5 +413,6 @@ function textAppearIfContactsLengthIs0() {
     textIfContactListIsEmpty.style.display = 'none';
   }
 }
+
 
 

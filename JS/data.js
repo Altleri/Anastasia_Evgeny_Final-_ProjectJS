@@ -12,6 +12,7 @@ let contacts = [
     name: 'Bertie Yates',
     address: "Haifa",
     phone: "054999000",
+    email: "email@gmail.com",
     age: '25',
     imageUrl: "./image/contact1.png",
   },
@@ -20,6 +21,7 @@ let contacts = [
     name: 'Hester Hogan',
     address: "Haifa",
     phone: "054996669",
+    email: "email1@gmail.com",
     age: '25',
     imageUrl: "./image/contact2.png"
   },
@@ -28,6 +30,7 @@ let contacts = [
     name: 'Larry Little',
     address: "Haifa",
     phone: "054966699",
+    email: "email2@gmail.com",
     age: '25',
     imageUrl: "./image/contact3.png"
   },
@@ -36,6 +39,7 @@ let contacts = [
     name: 'Sean Walsh',
     address: "Haifa",
     phone: "054555999",
+    email: "email3@gmail.com",
     age: '25',
     imageUrl: "./image/seanWalsh.png"
   },
@@ -44,7 +48,9 @@ let contacts = [
     name: 'Carry Jonh',
     address: "Haifa",
     phone: "054555999",
+    email: "email4@gmail.com",
     age: '25',
     imageUrl: "./image/carryJonh.png"
   },
+
 ]

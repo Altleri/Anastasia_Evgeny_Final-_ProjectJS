@@ -38,6 +38,14 @@ body {
   font-size: 50px;
 }
 
+.mainHeader{
+  text-align: center;
+}
+
+.textIfContactListIsEmpty{
+   font-size: 40px;
+}
+
 /*#endregion TITLE*/
 /*****************************************************************************************/
 
@@ -538,6 +546,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

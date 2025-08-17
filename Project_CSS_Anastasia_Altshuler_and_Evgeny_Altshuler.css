@@ -509,6 +509,10 @@ form button:hover,
     bottom: 10px; 
 }
 
+  .textIfContactListIsEmpty{
+    font-size: 30px;
+  }
+
 }
 
 @media only screen and (min-width:430px)and (max-width:541px){
@@ -546,6 +550,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

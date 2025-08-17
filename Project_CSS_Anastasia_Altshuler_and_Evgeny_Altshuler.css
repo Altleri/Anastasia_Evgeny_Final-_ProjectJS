@@ -486,8 +486,8 @@ form button:hover,
   }
 
 .info-form{
-  padding-left: 5%;
-  width: 90%;
+  padding-left: 0%;
+  width: 92%;
 }
 
   .info-form span {
@@ -575,6 +575,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 

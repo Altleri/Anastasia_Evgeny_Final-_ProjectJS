@@ -49,6 +49,7 @@ body {
 /*#endregion TITLE*/
 /*****************************************************************************************/
 
+
 /*****************************************************************************************/
 /*#region Main*/
 main {
@@ -62,9 +63,6 @@ main {
   border: 1px solid rgb(132, 131, 131);
   border-radius: 8px;
   box-sizing: border-box;
-
-  /*take into account the padding in the total width*/
-
 }
 
 /*#endregion*/
@@ -74,7 +72,7 @@ main {
 /*****************************************************************************************/
 /*#region Set Up of input text area*/
 
-/*Add class for changing display state in lava Script*/
+/*Add class for changing display state in java Script*/
 .displayNone {
   display: none !important;
 }
@@ -122,6 +120,7 @@ div {
   padding: 7px 0;
 }
 
+/* Container with contact search input*/
 #divSearchInputText1 {
   display: flex;
 }
@@ -148,28 +147,29 @@ div {
   padding-right: 6px;
 }
 
+/* Images in textinputAddAndDelete. Gives them style zoom on hover */
 #add-Person:hover {
   transform: scale(1.2)
 }
-
+/* Images in textinputAddAndDelete. Gives them style zoom on hover */
 #deletePerson:hover {
   transform: scale(1.2)
 }
 
-
 /*#endregion*/
 /*****************************************************************************************/
 
+
 /*****************************************************************************************/
 /*#region WITH USERS INFO*/
+/* our UL */
 .user-list {
-  /*deleted style of list*/
   padding: 0;
   margin: 0 auto;
   width: 100%;
 }
 
-
+/* our LI */
 .user-items {
   list-style: none;
   width: 100%;
@@ -193,12 +193,14 @@ div {
   /* Gradient* of shadow*/
 }
 
+
 .user-info {
   display: flex;
   /*split the screen*/
   align-items: center;
 }
 
+/*Avatar of contacts*/
 .avatar {
   width: 150px;
   height: 150px;
@@ -210,16 +212,19 @@ div {
   /* Gradient* of shadow*/
 }
 
+/*Name of contacts*/
 .user-name {
   font-weight: 500;
   color: #333;
   font-size: 1em;
 }
 
+/*Name of contacts zoom on hover*/
 .user-name:hover {
   transform: scale(1.1)
 }
 
+/*div with img edit, info, delete*/
 .user-actions {
   padding-right: 1%;
   display: flex;
@@ -228,10 +233,12 @@ div {
   font-size: 1px;
 }
 
+/*div with img edit, info, delete*/
 .user-actions img {
   width: 25px;
 }
 
+/*div with img edit, info, delete*/
 .user-actions img:hover {
   transform: scale(1.2)
 }
@@ -243,18 +250,25 @@ div {
 .footer {
   text-align: center;
   font-weight: 600;
+  padding: 10px 40px; 
+}
+
+.footer-text {
+  display: inline-block;
+  font-weight: 600;
 }
 
 /*****************************************************************************************/
 /*#region SET UP all FORMS (input, buttom )*/
 
+/*Forms into popups*/
 form {
   background: white;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-
+/*Divs with input and span into popups*/
 .form-group {
   padding-top: 2%;
   display: flex;
@@ -262,14 +276,14 @@ form {
   margin-bottom: 15px;
   margin: 10px 0;
 }
-
+/*Divs with input and span into popups*/
 .form-group label {
   flex: 0 0 100px;
   text-align: right;
   padding-right: 5px;
   font-weight: bold;
 }
-
+/*Divs with input and span into popups*/
 .form-group input,
 #saveBotton {
   flex-grow: 1;
@@ -302,13 +316,14 @@ form button:hover,
   color: white;
   box-shadow: 0 0 10px rgba(0, 119, 204, 0.3);
 }
-
+/*Default all popups in display none */
 .create-form,
 .edit-form,
 .info-form{
   display: none;
 }
 
+/*Info form need specified styling*/
 .info-form span
 {
  padding-left: 50px; 
@@ -325,7 +340,7 @@ form button:hover,
   text-align: center;
   font-weight: 600;
 } */
-
+/* 
 .footer {
   text-align: center; 
   padding: 10px 40px; 
@@ -334,8 +349,9 @@ form button:hover,
 .footer-text {
   display: inline-block;
   font-weight: 600;
-}
+} */
 
+/*Image in site page for changing site theme to dark*/
 .change-backgroundThem {
   position: fixed;   
   right: 30px;       
@@ -350,7 +366,7 @@ form button:hover,
   padding: 5px;
   z-index: 1000; 
 }
-
+/*Image in site page for changing site theme to dark*/
 .change-backgroundThem img {
   width: 100%;
   height: 100%;
@@ -575,6 +591,7 @@ form button:hover,
 /*#endregion*/
 
 /*****************************************************************************************/
+
 
 
 
